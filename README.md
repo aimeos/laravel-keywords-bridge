@@ -102,7 +102,9 @@ Both methods return a list of `Aimeos\KeywordsBridge\Keyword` objects:
 ```
 
 `Keyword` objects are JSON serializable to `{"keyword": "...", "volume": 1900}`.
-The volume is `null` if the service has no data for the keyword.
+The volume is `null` if the service has no data for the keyword. Returned keywords
+are unique and normalized by `Keyword::normalize()` (trimmed, lower case, single
+spaces), which you can use for comparing them with your own keywords.
 
 ### Worldwide Data
 
@@ -165,6 +167,10 @@ class Foobar implements Driver
     }
 }
 ```
+
+Normalize the passed keywords using `Keyword::unique()` or `Keyword::normalize()`,
+the returned keywords using `Keyword::normalize()` and
+don't return the same keyword twice.
 
 Register your driver in `config/keywords-bridge.php`:
 

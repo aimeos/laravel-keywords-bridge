@@ -5,6 +5,9 @@ namespace Aimeos\KeywordsBridge\Contracts;
 use Aimeos\KeywordsBridge\Keyword;
 
 
+/**
+ * Returned keywords are normalized by Keyword::normalize() and unique.
+ */
 interface Driver
 {
     /**
