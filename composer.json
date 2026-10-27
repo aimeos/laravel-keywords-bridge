@@ -1,0 +1,46 @@
+{
+  "name": "aimeos/laravel-keywords-bridge",
+  "description": "Unified keyword research bridge for Laravel",
+  "keywords": [
+    "laravel",
+    "seo",
+    "keywords",
+    "search volume",
+    "google ads",
+    "ahrefs",
+    "semrush"
+  ],
+  "type": "library",
+  "license": "LGPL-2.1+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Aimeos\\KeywordsBridge\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/",
+      "Aimeos\\KeywordsBridge\\Drivers\\": "tests/Drivers/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0||^12.0||^13.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0||^10.0||^11.0",
+    "phpunit/phpunit": "^11.5||^12.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Aimeos\\KeywordsBridge\\ServiceProvider"
+      ],
+      "aliases": {
+        "Keywords": "Aimeos\\KeywordsBridge\\Facades\\Keywords"
+      }
+    }
+  }
+}
