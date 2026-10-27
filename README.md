@@ -11,6 +11,23 @@ search volume and related keywords across Google Ads, Ahrefs and Semrush.
 * Worldwide data if the service supports it
 * Easily extendable with new drivers
 
+## Installation
+
+Install the package of the driver you want to use, the bridge is installed
+automatically:
+
+| Service    | Package                                                                               | `KEYWORDS_DRIVER` |
+|------------|---------------------------------------------------------------------------------------|-------------------|
+| Google Ads | [aimeos/laravel-keywords-google](https://github.com/aimeos/laravel-keywords-google)   | `google`          |
+| Ahrefs     | [aimeos/laravel-keywords-ahrefs](https://github.com/aimeos/laravel-keywords-ahrefs)   | `ahrefs`          |
+| Semrush    | [aimeos/laravel-keywords-semrush](https://github.com/aimeos/laravel-keywords-semrush) | `semrush`         |
+
+```bash
+composer require aimeos/laravel-keywords-google
+```
+
+The READMEs of the driver packages describe the required settings.
+
 ## Configuration
 
 Publish the configuration file:
